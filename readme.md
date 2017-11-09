@@ -23,7 +23,7 @@ Navigate to the installation folder in Terminal.
 
 Enter the line ```ruby user_interface.rb``` in terminal. This will start the console application
 
-To test that the application is running correctly, enter 101 as the search value.
+To test that the application is running correctly, enter ```101``` as the search value.
 
 The result should be:
 
