@@ -24,7 +24,6 @@ class UserInterface
   def search_value
     puts 'Enter a search value:'
     user_response = gets.chomp
-    user_response
   end
 
   def do_action(search_string)
