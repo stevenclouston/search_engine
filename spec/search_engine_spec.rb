@@ -1,0 +1,79 @@
+require 'spec_helper'
+require 'byebug'
+
+
+describe SearchEngine do
+  before :all do
+    @data_hash = get_data_hash
+    @search_engine = SearchEngine.new
+  end
+
+  describe "#new" do
+      it "Returns a SearchEngine object" do
+          @search_engine.should be_an_instance_of SearchEngine
+      end
+  end
+
+  describe "#add_data" do
+    it "adds three hashes to search engine" do
+        @search_engine.add_data(@data_hash, 'project').should eql 3
+    end
+  end
+
+  describe "#find" do
+    let(:return_array) { [{:_id=>101, :url=>"http://example.com/projects-1", :external_id=>"9270ed79-35eb-4a38-a46f-35725197ea8d", :name=>"My first project",
+      :tags=>["Exterior", "Workplace Fun"], :created_at=>"2016-05-21T11:10:28 -10:00", :data_set_name=>"project"}] }
+    it "returns array from search engine" do
+      expect(@search_engine.find("9270ed79-35eb-4a38-a46f-35725197ea8d")).to eq(return_array)
+    end
+  end
+
+  def get_data_hash
+    [
+      {
+        "_id": 101,
+        "url": "http://example.com/projects-1",
+        "external_id": "9270ed79-35eb-4a38-a46f-35725197ea8d",
+        "name": "My first project",
+        "tags": [
+          "Exterior",
+          "Workplace Fun"
+        ],
+        "created_at": "2016-05-21T11:10:28 -10:00"
+      },
+      {
+        "_id": 103,
+        "url": "http://example.com/projects-2",
+        "external_id": "7cd6b8d4-2999-4ff2-8cfd-44d05b449226",
+        "name": "My first project",
+        "location": [
+          "Melbourne",
+          "Singapore"
+        ],
+        "created_at": "2016-04-07T08:21:44 -10:00",
+        "details": "Non profit",
+        "published": false,
+        "tags": [
+          "Trevino"
+        ]
+      },
+      {
+        "_id": 102,
+        "url": "http://example.com/projects-2",
+        "external_id": "7cd6b8d4-2999-4ff2-8cfd-44d05b449226",
+        "name": "Project with HP",
+        "location": [
+          "Melbourne",
+          "Singapore"
+        ],
+        "created_at": "2016-04-07T08:21:44 -10:00",
+        "details": "Non profit",
+        "published": false,
+        "tags": [
+          "Trevino"
+        ]
+      }
+
+    ]
+  end
+end
