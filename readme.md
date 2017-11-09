@@ -44,9 +44,9 @@ url: http://example.com/projects-1
 
 Ensure that rspec is installed: run 'gem install rspec'.
 
-Run: ```rspec spec``` in Terminal
+Run: ```rspec spec``` in Terminal.
 
-11 examples should be completed successfully
+11 examples should be completed successfully.
 
 ### Break down into end to end tests
 
