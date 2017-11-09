@@ -16,7 +16,7 @@ run 'gem install json'
 ### Installing
 
 ```
-git clone https://github.com/stevenclouston/demo_search_engine.git
+git clone https://github.com/stevenclouston/search_engine.git
 ```
 
 Navigate to the installation folder in terminal.
