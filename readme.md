@@ -48,8 +48,6 @@ Run: ```rspec spec``` in Terminal.
 
 11 examples should be completed successfully.
 
-### Break down into end to end tests
-
 Tests are separated into 3 files: search_engine_spec tests, data_handler_spec tests, and user_interface_spec tests.
 
 search_engine_spec tests ensure that data can be loaded into the SearchEngine class and found correctly.
