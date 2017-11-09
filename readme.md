@@ -19,7 +19,7 @@ run 'gem install json'
 git clone https://github.com/stevenclouston/demo_search_engine.git
 ```
 
-Navigate to the installation folder in Terminal.
+Navigate to the installation folder in terminal.
 
 Enter the line ```ruby search_application.rb``` in terminal. This will start the console application
 
