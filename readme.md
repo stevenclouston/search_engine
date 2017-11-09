@@ -21,7 +21,7 @@ git clone https://github.com/stevenclouston/demo_search_engine.git
 
 Navigate to the installation folder in Terminal.
 
-Enter the line ```ruby user_interface.rb``` in terminal. This will start the console application
+Enter the line ```ruby search_application.rb``` in terminal. This will start the console application
 
 To test that the application is running correctly, enter ```101``` as the search value.
 
