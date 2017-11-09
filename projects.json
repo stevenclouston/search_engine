@@ -4,6 +4,7 @@
     "url": "http://example.com/projects-1",
     "external_id": "9270ed79-35eb-4a38-a46f-35725197ea8d",
     "name": "My first project",
+    "published": false,
     "tags": [
       "Exterior",
       "Workplace Fun"

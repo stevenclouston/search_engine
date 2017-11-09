@@ -1,7 +1,7 @@
 class SearchEngine
   attr_accessor :data_set, :search_hash
 
-  def initialize()
+  def initialize
     @data_set = []
     @search_hash = {}
   end
@@ -12,12 +12,12 @@ class SearchEngine
       add_data_to_search_hash(data)
       add_data_to_data_set(data)
     end
-    @data_set.length
+    @data_set
   end
 
   def find(search_value)
     data_output = []
-    data_set_ids = @search_hash[search_value]
+    data_set_ids = @search_hash[search_value.downcase]
     unless data_set_ids.nil?
       data_set_ids.each do |data_set_id|
         data_output << @data_set[data_set_id]
@@ -27,11 +27,22 @@ class SearchEngine
   end
 
   private
+
   def add_data_to_search_hash(data)
-    data.keys.each do |key|
-      @search_hash[data[key]] = [] if @search_hash[data[key]].nil?
-      @search_hash[data[key]] << @data_set.length
+    data.each_key do |key|
+      if data[key].is_a?(Array)
+        data[key].each do |element|
+          push_data_onto_search_hash(element)
+        end
+      else
+        push_data_onto_search_hash(data[key])
+      end
     end
+  end
+
+  def push_data_onto_search_hash(value)
+    @search_hash[value.to_s.downcase] = [] if @search_hash[value.to_s.downcase].nil?
+    @search_hash[value.to_s.downcase] << @data_set.length
   end
 
   def add_data_to_data_set(data)

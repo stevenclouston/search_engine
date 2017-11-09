@@ -8,10 +8,6 @@ class DataHandler
   end
 
   def import
-    load_search_data
-  end
-
-  def load_search_data
     import_users_data
     import_projects_data
   end
@@ -19,12 +15,12 @@ class DataHandler
   def import_users_data
     file = File.read('users.json')
     users_data = JSON.parse(file)
-    @search_engine.add_data(users_data, 'users')
+    @search_engine.add_data(users_data, 'user')
   end
 
   def import_projects_data
     file = File.read('projects.json')
     projects_data = JSON.parse(file)
-    @search_engine.add_data(projects_data, 'projects')
+    @search_engine.add_data(projects_data, 'project')
   end
 end
