@@ -1,4 +1,4 @@
-# Demo Search Engine
+# Search Engine
 
 This search engine loads data from json files and provides a console interface that allows the user to search for data.  Values from any related entities are included in the search results.
 
@@ -18,17 +18,16 @@ run 'gem install json'
 ```
 git clone https://github.com/stevenclouston/demo_search_engine.git
 ```
-```
+
 Navigate to the installation folder in Terminal.
-```
-```
-Enter the line 'ruby user_interface.rb' in terminal. This will start the console application
-```
-```
+
+Enter the line ```ruby user_interface.rb``` in terminal. This will start the console application
+
 To test that the application is running correctly, enter 101 as the search value.
 
 The result should be:
 
+```
 Data Type: Project
 _id: 101
 created_at: 2016-05-21T11:10:28 -10:00
