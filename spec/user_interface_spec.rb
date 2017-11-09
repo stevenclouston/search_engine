@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'byebug'
 
 describe UserInterface do
   before :all do

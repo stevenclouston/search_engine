@@ -1,6 +1,5 @@
 require_relative 'search_engine'
 require_relative 'data_handler'
-require 'byebug'
 
 class UserInterface
   attr_accessor :data_handler

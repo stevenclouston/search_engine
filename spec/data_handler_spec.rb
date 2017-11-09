@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'byebug'
 
 describe DataHandler do
   before :all do
